@@ -6,3 +6,7 @@ gpg --armor --export-secret-keys 981D97E977939DE5
 gpg --import llave_anthony.asc
 #Comprobar
 gpg --list-keys
+#Se manda un archivo de mensaje
+echo "hola estoy contandote un secretito" > doc_no_cifrado.txt
+#Veo el mensaje
+cat doc_no_cifrado.txt
