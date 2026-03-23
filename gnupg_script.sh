@@ -16,3 +16,5 @@ gpg --list-keys
 gpg --output doc_cifrado.txt --encrypt --recipient 776C4D8CE189758F90E8CAE973D05C4245F8DC04 doc_no_cifrado.txt
 #Se ve doc cifrado
 cat doc_cifrado.txt
+#Decifro el mensaje de mi amigo
+gpg --decrypt doc_cifrado_1.txt
