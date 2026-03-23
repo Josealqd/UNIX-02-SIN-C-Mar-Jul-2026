@@ -4,3 +4,5 @@ gpg --list-secret-keys --keyid-format=long
 gpg --armor --export-secret-keys 981D97E977939DE5
 #Importar llave de mi amigo
 gpg --import llave_anthony.asc
+#Comprobar
+gpg --list-keys
