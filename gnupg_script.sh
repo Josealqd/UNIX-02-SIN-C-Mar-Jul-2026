@@ -10,3 +10,7 @@ gpg --list-keys
 echo "hola estoy contandote un secretito" > doc_no_cifrado.txt
 #Veo el mensaje
 cat doc_no_cifrado.txt
+#Copio el hash de mi amigo
+gpg --list-keys
+#Con el hash cifro el documento
+gpg --output doc_cifrado.txt --encrypt --recipient 776C4D8CE189758F90E8CAE973D05C4245F8DC04 doc_no_cifrado.txt
