@@ -37,3 +37,6 @@ gpg --edit-key herrerael823@gmail.com
 gpg --sign-key herrerael823@gmail.com
 # Verify the file signed by the peer again to note the change in the warning
 gpg --verify doc_no_cifrado_anthony.txt.gpg
+# --F block
+# Perform encryption and signing in a single step (gpg --encrypt --sign)
+gpg --output jose_firmado.txt.gpg --encrypt --sign --recipient 776C4D8CE189758F90E8CAE973D05C4245F8DC04 doc_no_cifrado.txt
