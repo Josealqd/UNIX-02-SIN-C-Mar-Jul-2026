@@ -18,3 +18,6 @@ gpg --output doc_cifrado.txt --encrypt --recipient 776C4D8CE189758F90E8CAE973D05
 cat doc_cifrado.txt
 #Decifro el mensaje de mi amigo
 gpg --decrypt doc_cifrado_1.txt
+#--D block
+# Sign the file in plain text using --clearsign
+gpg --output doc_no_cifrado_firmado.txt --clearsign doc_no_cifrado.txt
