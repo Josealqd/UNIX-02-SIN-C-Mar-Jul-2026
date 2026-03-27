@@ -21,3 +21,7 @@ gpg --decrypt doc_cifrado_1.txt
 #--D block
 # Sign the file in plain text using --clearsign
 gpg --output doc_no_cifrado_firmado.txt --clearsign doc_no_cifrado.txt
+# Generate a signature in binary format with the --sign option
+gpg --sign doc_no_cifrado.txt
+# Create a separate signature using --detach-sign
+gpg --detach-sign doc_no_cifrado.txt
