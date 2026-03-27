@@ -35,3 +35,5 @@ gpg --verify doc_no_cifrado_anthony.txt.sig doc_no_cifrado_anthony.txt
 gpg --edit-key herrerael823@gmail.com
 # Sign the peer's key (gpg --sign-key)
 gpg --sign-key herrerael823@gmail.com
+# Verify the file signed by the peer again to note the change in the warning
+gpg --verify doc_no_cifrado_anthony.txt.gpg
