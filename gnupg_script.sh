@@ -40,3 +40,7 @@ gpg --verify doc_no_cifrado_anthony.txt.gpg
 # --F block
 # Perform encryption and signing in a single step (gpg --encrypt --sign)
 gpg --output jose_firmado.txt.gpg --encrypt --sign --recipient 776C4D8CE189758F90E8CAE973D05C4245F8DC04 doc_no_cifrado.txt
+# Decrypt the file and verify the signature simultaneously (gpg --decrypt)
+gpg --decrypt --output verification_anthony.txt doc_cifrado_firmado_aanthony.txt.gpg
+# Review the contents of the generated file using cat
+cat verification_anthony.txt
