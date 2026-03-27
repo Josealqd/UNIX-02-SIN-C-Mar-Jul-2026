@@ -31,3 +31,7 @@ gpg --verify doc_no_cifrado_anthony.txt.sig doc_no_cifrado_anthony.txt
 # REFLECTION ON WEB OF TRUST:
 # Level 4 (full trust) was established because there is complete certainty about Anthony's identity.
 #This causes the warning to disappear when their signatures are verified.
+# Set the trust level for the peer's key (gpg --edit-key → trust)
+gpg --edit-key herrerael823@gmail.com
+# Sign the peer's key (gpg --sign-key)
+gpg --sign-key herrerael823@gmail.com
