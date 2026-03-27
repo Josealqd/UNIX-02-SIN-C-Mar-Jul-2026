@@ -27,3 +27,7 @@ gpg --sign doc_no_cifrado.txt
 gpg --detach-sign doc_no_cifrado.txt
 # Validate a received signature with the command gpg --verify
 gpg --verify doc_no_cifrado_anthony.txt.sig doc_no_cifrado_anthony.txt
+# --E block
+# REFLECTION ON WEB OF TRUST:
+# Level 4 (full trust) was established because there is complete certainty about Anthony's identity.
+#This causes the warning to disappear when their signatures are verified.
