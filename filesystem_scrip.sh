@@ -8,3 +8,25 @@ cd /proc
 ls
 #show cpu information
 cat cpuinfo
+#Change to general directory
+cd
+#list general directory files
+ls
+#change to the bin directory
+ cd /bin
+#List bin directory files
+ls
+#Change to the workspace directory
+cd /workspaces/UNIX-02-SIN-C-Mar-Jul-2026 
+#Change the file to a binary file
+gcc saludo.c -o saludo_bin 
+#Move the file to the bin directory
+sudo mv saludo_bin /bin
+#List the bin directory to look for the saludo_bin file
+ls
+#Shows the saludo_bin content
+cat saludo_bin 
+#Change directory to Home
+cd /home 
+#Print the original file content, not the binary
+saludo_bin 
