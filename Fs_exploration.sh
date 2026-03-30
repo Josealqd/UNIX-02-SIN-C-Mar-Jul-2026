@@ -10,3 +10,7 @@ pip install numpy
 sudo parted -l && echo -e "\n---\n" && lsblk -f && echo -e "\n---\n"
 #Verify if we using UEFI
 [ -d /sys/firmware/efi ] && echo "UEFI" || echo "BIOS"
+#
+echo "Mi archivo" >test.txt
+#It gives us information about blocks in the system
+stat test.txt
