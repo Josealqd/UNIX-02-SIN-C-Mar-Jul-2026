@@ -64,4 +64,12 @@ chmod +x hola.sh
 #Executes the script now that it has the necessary permissions.
 ./hola.sh
 #Shows the file details, allowing you to verify that it now has the execution permission (x).
-ls -l hola.sh
+ls -hola.sh
+#It's not necessary. Reading /etc is public.
+ls /etc
+#Yes, it is needed. /etc belongs to root and does not allow normal users to write to it.
+touch /etc/prueba.txt
+#You don't need to. - It's your own home.
+mkdir -/mi_carpeta 
+#Yes, it is necessary. Installing packages touches system directories (/usr/bin, etc.).
+apt install cowsay
