@@ -37,3 +37,5 @@ This command removes all permissions (owner reads/writes, no one else can do any
 chmod u+rw,go-rwx privado
 #It attempts to overwrite a protected file in /etc with "hola," but typically fails because shell redirection doesn't inherit elevated privileges.
 sudo echo "hola" > /etc/archivo_protegido
+#The "dev null" method is used; this is a black hole that is not displayed on the screen.
+echo "hola" | sudo tee /etc/archivo_protegido > /dev/null
