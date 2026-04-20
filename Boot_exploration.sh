@@ -73,3 +73,17 @@ touch /etc/prueba.txt
 mkdir -/mi_carpeta 
 #Yes, it is necessary. Installing packages touches system directories (/usr/bin, etc.).
 apt install cowsay
+#Creates an empty file named prueba.txt using administrator privileges (the owner will be the root user).
+sudo touch prueba.txt
+#Attempts to change permissions, but likely fails with "Permission denied" because the file belongs to root and you are running it as a normal user.
+chmod 600 prueba.txt
+#Successfully changes the file permissions so that only the owner (root) can read and write it.
+sudo chmod 600 prueba.txt
+#Lists all files in the current directory with technical details (permissions, owner, size).
+ls -l 
+#Displays the permission and ownership details specifically for the prueba.txt file.
+ls -l prueba.txt
+#Changes the permissions to rwxr-xr-x: the owner has full control, and everyone else can only read and execute.
+sudo chmod 755 prueba.txt
+#Verifies the changes again to confirm that the file is now public for reading and execution.
+ls -l prueba.txt
