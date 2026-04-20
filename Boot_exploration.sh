@@ -39,3 +39,7 @@ chmod u+rw,go-rwx privado
 sudo echo "hola" > /etc/archivo_protegido
 #The "dev null" method is used; this is a black hole that is not displayed on the screen.
 echo "hola" | sudo tee /etc/archivo_protegido > /dev/null
+#Appends the word "chao" to the end of a protected file by running the entire redirection within a root shell.
+sudo sh -c 'echo "chao" >> /etc/archivo_protegido'
+#The "cat" command is used to check if it executed correctly.
+cat /etc/archivo_protegido
