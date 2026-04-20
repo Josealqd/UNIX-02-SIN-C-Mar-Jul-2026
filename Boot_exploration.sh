@@ -49,3 +49,19 @@ sudo -i
 echo '$HOME'
 #Expand the variable and display it in the directory.
 echo "$BASH"
+#Exercise 1
+#Creates the file hola.sh and writes the shebang header to specify it is a shell script.
+echo '#!/bin/sh' > hola.sh
+#Appends a line to the file that will print the text "15 es mayor que 5" when run.
+echo 'echo "15 es mayor que 5"' >> hola.sh
+#Displays the current contents of the hola.sh file in the terminal.
+cat hola.sh
+#Attempts to run the script, which will fail if execution permissions have not been granted yet.
+./hola.sh
+#Exercise 1 "Solution"
+#Grants execution permissions to the file so the system allows it to run as a program.
+chmod +x hola.sh
+#Executes the script now that it has the necessary permissions.
+./hola.sh
+#Shows the file details, allowing you to verify that it now has the execution permission (x).
+ls -l hola.sh
