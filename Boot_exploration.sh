@@ -26,7 +26,7 @@ unless --no-single-branch is given to fetch the
 #"-" is a normal file type
 #"rw" has read and write permissions only
 #This string represents the file type and the access permissions for three different categories of users.
--rw-rw-rw-  1 codespace root       1217 Apr 17 14:15 cifrado_firmado_final_CayeC.txt.gpg
+-rw-rw-rw-  1 codespace root    
 #Command to change permissions so that everyone can run it
 chmod +x script.sh 
 #command so that only the owner can execute it
@@ -35,3 +35,5 @@ chmod u+x script.sh
 chmod o-r secreto.txt
 This command removes all permissions (owner reads/writes, no one else can do anything)
 chmod u+rw,go-rwx privado
+#It attempts to overwrite a protected file in /etc with "hola," but typically fails because shell redirection doesn't inherit elevated privileges.
+sudo echo "hola" > /etc/archivo_protegido
