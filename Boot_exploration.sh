@@ -45,3 +45,7 @@ sudo sh -c 'echo "chao" >> /etc/archivo_protegido'
 cat /etc/archivo_protegido
 #We temporarily entered root and exited with the "exit" command
 sudo -i
+#prints only the variable
+echo '$HOME'
+#Expand the variable and display it in the directory.
+echo "$BASH"
