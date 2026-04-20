@@ -43,3 +43,5 @@ echo "hola" | sudo tee /etc/archivo_protegido > /dev/null
 sudo sh -c 'echo "chao" >> /etc/archivo_protegido'
 #The "cat" command is used to check if it executed correctly.
 cat /etc/archivo_protegido
+#We temporarily entered root and exited with the "exit" command
+sudo -i
