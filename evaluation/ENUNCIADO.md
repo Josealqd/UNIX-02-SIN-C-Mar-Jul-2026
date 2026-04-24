@@ -101,26 +101,6 @@ git commit -m "Fix problema 3: permisos numericos 640 en telemetria.log"
 
 ---
 
-### Problema 4 — Permisos simbólicos con `chmod` · (1 pt máx · 2 fallos)
-
-Hay **2 fallos** que deben corregirse usando **notación simbólica** (`u+x`, `o-w`, etc.):
-
-1. `script.sh` no tiene permiso de ejecución para su dueño. Añádelo.
-2. `config.conf` tiene permiso de escritura para `others`. Quítalo.
-
-> ⚠️ Usa **solo notación simbólica**. No uses números para este problema.
-
-| Sub-check | Correcto | Intento fallido | Sin respuesta |
-|---|---|---|---|
-| 4a. `script.sh` tiene bit `u+x` | **+0.50** | -0.25 | 0 |
-| 4b. `config.conf` no tiene bit `o+w` | **+0.50** | -0.25 | 0 |
-
-```bash
-git add .
-git commit -m "Fix problema 4: permisos simbolicos corregidos"
-```
-
----
 
 ### Problema 5 — Bit SUID · (1 pt máx · 1 fallo)
 
