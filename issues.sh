@@ -1,3 +1,3 @@
-#
-Para resolver los problemas que se nos presentan no debemos acudir directamente a la ia ya que hay otros ingenieros que pudieron ya haber pasado
-nuestros mismos problemas y podemos encontrar los repositorios en github o en Stack over flow
+#COMMIT
+To solve the problems we face, we shouldn't turn directly to AI, as there are other engineers who may have already encountered the same problems,
+and we can find their repositories on GitHub or Stack Overflow.
