@@ -44,3 +44,7 @@ rwx
 chmod
 #Allow the owner of this file (hello.sh) to run it as a program."
 chmod u+x hello.sh
+#Change the owner of a file or folder
+chown
+#It forces the system (as administrator/sudo) to change the owner of the hello.sh file so that it now belongs to the root user.
+sudo chown root hello.sh 
