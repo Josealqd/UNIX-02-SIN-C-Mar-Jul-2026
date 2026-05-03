@@ -40,3 +40,7 @@ su --login
 sudo sl
 #This section explains what rwx means
 rwx
+#It teaches how to change permissions for users, groups, and others using rwx.
+chmod
+#Allow the owner of this file (hello.sh) to run it as a program."
+chmod u+x hello.sh
