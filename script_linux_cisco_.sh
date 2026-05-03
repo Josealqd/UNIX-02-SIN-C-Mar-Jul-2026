@@ -6,4 +6,10 @@ LS
 ls Documents
 #This command provides more information about each of the listed files.
 ls -l
+#print in reverse alphabetical order
+ls -r
+#Variations of the command can be used
+ls -l -r
+ls -rl
+ls -lr
 #
