@@ -12,4 +12,6 @@ ls -r
 ls -l -r
 ls -rl
 ls -lr
+#It tells you that you are in your home folder.
+pwd
 #
