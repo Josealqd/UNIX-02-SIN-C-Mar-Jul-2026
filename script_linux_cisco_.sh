@@ -2,3 +2,6 @@
 ls
 #Using all caps is incorrect and you will get an error message on the screen
 LS
+#directory listing found in documents
+ls Documents
+#
