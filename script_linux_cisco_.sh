@@ -54,4 +54,5 @@ cat
 head and tail
 #The head and tail commands can be used to specify the number of lines to display.
 -n
- 
+#The cp command is used to copy files. It requires a source and a destination.
+cp
