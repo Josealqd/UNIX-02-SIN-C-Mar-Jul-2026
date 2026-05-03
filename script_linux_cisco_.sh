@@ -48,3 +48,10 @@ chmod u+x hello.sh
 chown
 #It forces the system (as administrator/sudo) to change the owner of the hello.sh file so that it now belongs to the root user.
 sudo chown root hello.sh 
+#El comando cat, que significa “concatenar”, a menudo se usa para ver rápidamente el contenido de archivos pequeños.
+cat
+#These commands are used to view a selected number of lines from the top or bottom of a file
+head and tail
+#The head and tail commands can be used to specify the number of lines to display.
+-n
+ 
