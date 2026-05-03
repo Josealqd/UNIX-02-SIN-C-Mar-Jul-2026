@@ -4,4 +4,6 @@ ls
 LS
 #directory listing found in documents
 ls Documents
+#This command provides more information about each of the listed files.
+ls -l
 #
