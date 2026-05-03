@@ -56,3 +56,7 @@ head and tail
 -n
 #The cp command is used to copy files. It requires a source and a destination.
 cp
+#The dd command is used to copy files or entire partitions at the bit level
+dd
+#It generates a blank 50MB file, typically used to create a swap file (virtual RAM) in Linux.
+dd if=/dev/zero of=/tmp/swapex bs=1M count=50
