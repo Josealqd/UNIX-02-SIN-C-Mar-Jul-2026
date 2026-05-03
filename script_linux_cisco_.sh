@@ -20,3 +20,13 @@ cd
 cd Documents
 #Return to the home director at any time
 cd ~
+#provides a variety of results
+ls -l /var/log
+#It will sort the files by their timestamp.
+ls -lt /var/log
+#It will sort the files by file size
+ls -l -s /var/log
+#It will reverse the order of any sorting type. Notice the difference when added to the previous example.
+ls -lSr /var/log
+#with the list of files in reverse alphabetical order
+ls -r /var/log
