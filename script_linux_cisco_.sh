@@ -38,3 +38,5 @@ su -l
 su --login
 #It displays the animation of the train crossing the screen, but executed with administrator privileges.
 sudo sl
+#This section explains what rwx means
+rwx
