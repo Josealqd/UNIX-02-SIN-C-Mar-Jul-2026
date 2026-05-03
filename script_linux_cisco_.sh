@@ -30,3 +30,11 @@ ls -l -s /var/log
 ls -lSr /var/log
 #with the list of files in reverse alphabetical order
 ls -r /var/log
+#It's the shortest shortcut and the one most frequently used by administrators on a daily basis. It switches the user and loads their clean environment.
+su -
+#It does the same thing, but the "l" explicitly stands for login. It's simply another way of writing the previous command.
+su -l
+#This is the longer, more descriptive version. It does exactly the same thing, but it's usually used when writing scripts.
+su --login
+#It displays the animation of the train crossing the screen, but executed with administrator privileges.
+sudo sl
