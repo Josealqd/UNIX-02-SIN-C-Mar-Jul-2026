@@ -14,4 +14,9 @@ ls -rl
 ls -lr
 #It tells you that you are in your home folder.
 pwd
-#
+#changes your directory
+cd 
+#It moves you to the documents directory
+cd Documents
+#Return to the home director at any time
+cd ~
