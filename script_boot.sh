@@ -26,3 +26,50 @@ ls -lai
 ls -l -a -i
 # Output comprehensive status and metadata for the current directory ('.')
 stat 
+# Return immediately to the current user's home directory
+cd
+# Print the current directory path to confirm your location
+pwd
+# Navigate directly to the 'proyecto' directory using its absolute path again
+cd /workspaces/UNIX-02-SIN-C-Mar-Jul-2026/proyecto/
+# Use the $HOME environment variable to go back to the home directory
+cd $HOME
+# Start a new instance of the Bash shell
+$BASH
+# Print the username of the currently logged-in user
+whoami
+# Elevate privileges to become the root (superuser)
+sudo su
+# Verify the current user (should output 'root' now)
+whoami
+# List files in a detailed format, sorted by modification time (newest first)
+ls -lt
+# Open the manual page to read documentation for the 'ls' command
+man ls
+# List the contents of '/dev' but only display the first 7 entries
+ls /dev | head -7
+# Display the configuration files and directories located in '/etc'
+ls /etc
+# Display only the last 5 entries from the '/etc' directory listing
+ls /etc | tail -5
+# Show a detailed directory listing of all items, including hidden files
+ls -al
+# --- DISTRO CREATION COMMANDS ---
+# Update the local package index using administrative privileges
+sudo apt update
+# Automatically install all necessary dependencies and tools to build the custom OS
+sudo apt install -y git vim make gcc libncurses-dev flex bison bc cpio libelf-dev libssl-dev syslinux dosfstools qemu-system
+# Clone the Linux kernel repository, pulling only the most recent commit to save time
+git clone --depth 1 https://github.com/torvalds/linux.git
+# Move into the newly cloned 'Linux' repository
+cd Linux
+# Launch the terminal-based configuration menu to customize kernel settings (e.g., 64-bit support)
+make menuconfig
+# Compile the kernel, utilizing 2 CPU cores to speed up the process
+make -j 2
+# Create a dedicated directory at the root level for storing boot-related files
+sudo mkdir /boot-files
+# Copy the newly compiled kernel image (bzImage) into the boot directory
+sudo cp arch/x86/boot/bzImage /boot-files/
+# Step back out of the Linux kernel directory
+cd ..
