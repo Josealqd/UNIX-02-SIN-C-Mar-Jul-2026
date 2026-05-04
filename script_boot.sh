@@ -99,3 +99,31 @@ sudo chmod +x init
 sudo sh -c "find . | cpio -o -H newc > ../init.cpio"
 # Move up to the '/boot-files' directory
 cd ..
+# Gain root privileges for the upcoming disk and filesystem operations
+sudo su
+# Generate a 50MB empty file filled with zeros to act as our virtual disk image
+dd if=/dev/zero of=boot bs=1M count=50
+# Format the newly created virtual disk with a FAT file system
+mkfs -t fat boot
+# Install the Syslinux bootloader onto the virtual disk image
+syslinux boot
+# Create a temporary folder named 'm' to use as a mount point
+mkdir m
+# Mount the virtual disk image to the 'm' directory to access its contents
+mount boot m
+# Transfer the compiled kernel and the initramfs archive into the mounted disk
+cp bzImage init.cpio m
+# Safely unmount the virtual disk image
+umount m
+# Boot the custom operating system in a QEMU virtual machine, using the terminal as the console
+sudo qemu-system-x86_64 -nographic -append "console=ttyS0" -kernel bzImage -initrd init.cpio -drive file=boot,format=raw
+# List the files available within the new custom OS (inside QEMU)
+ls
+# Check the current working directory inside the virtual machine
+pwd
+# Open the init file again inside the VM for editing
+vi init
+# Launch the 'bc' basic calculator tool
+bc
+# Exit the 'bc' calculator
+quit}
