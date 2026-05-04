@@ -73,3 +73,29 @@ sudo mkdir /boot-files
 sudo cp arch/x86/boot/bzImage /boot-files/
 # Step back out of the Linux kernel directory
 cd ..
+# Fetch the BusyBox repository, grabbing only the latest commit
+git clone --depth 1 https://git.busybox.net/busybox
+# Enter the cloned 'busybox' directory
+cd busybox
+# Open the BusyBox configuration menu (ensure 'Build static binary' is enabled here)
+make menuconfig
+# Build BusyBox using 2 processor cores
+make -j 2
+# Create a folder within /boot-files to hold the initial RAM filesystem structure
+sudo mkdir /boot-files/initramfs
+# Install the compiled BusyBox binaries and symlinks directly into the initramfs folder
+sudo make CONFIG_PREFIX=/boot-files/initramfs install
+# Navigate into the newly populated initramfs folder
+cd /boot-files/initramfs
+# Create and edit the primary 'init' script using the vi editor as superuser
+sudo vi init
+# Print the contents of the 'init' script to the terminal
+cat init
+# Delete the default 'linuxrc' file as it is not needed for this setup
+sudo rm linuxrc
+# Make the 'init' script executable so the system can run it during boot
+sudo chmod +x init
+# Package the current directory contents into a cpio archive named 'init.cpio'
+sudo sh -c "find . | cpio -o -H newc > ../init.cpio"
+# Move up to the '/boot-files' directory
+cd ..
