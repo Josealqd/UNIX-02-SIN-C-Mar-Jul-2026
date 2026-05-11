@@ -63,6 +63,12 @@ chgrp diseno \ ~/lab_chgrp/proyectos/config.json \ ~/lab_chgrp/reportes/informe.
 ls -la ~/lab_chgrp/proyectos/
 #Shows all files in the reportes folder with detailed information such as permissions, owner, and group.
 ls -la ~/lab_chgrp/reportes/
+#Recursively changes the group ownership of the directory and all its contents to desarrolladores
+sudo chgrp -R desarrolladores ~/lab_chgrp/scripts/
+#Recursively lists all files in a detailed format to verify the changes.
+ls -laR ~/lab_chgrp/scripts/
+#Recursively changes the group ownership to diseno and prints a message for every file changed (verbose).
+sudo chgrp -Rv diseno ~/lab_chgrp/reportes/
 
 
 
