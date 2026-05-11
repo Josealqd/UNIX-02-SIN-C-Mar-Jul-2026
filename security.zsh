@@ -57,6 +57,15 @@ ls -la ~/lab_chgrp/proyectos/
 ls -ls ~/lab_chgrp/reportes/
 #Changes the group ownership of the file app.py to the group desarrolladores
 chgrp desarrolladores ~/lab_chgrp/proyectos/app.py
+#Changes the group ownership of both the config.json and informe.txt files to the group diseno.
+chgrp diseno \ ~/lab_chgrp/proyectos/config.json \ ~/lab_chgrp/reportes/informe.txt
+#Shows all files in the proyectos folder with detailed information like permissions, owner, and group.
+ls -la ~/lab_chgrp/proyectos/
+#Shows all files in the reportes folder with detailed information such as permissions, owner, and group.
+ls -la ~/lab_chgrp/reportes/
+
+
+
 
 
 
