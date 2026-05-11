@@ -51,6 +51,10 @@ usermod -G desarrolladores root
 #Remove all child groups except developers
 usermod -aG diseno,marketing,grupo_temporal root
 #return
+#Lists all files (including hidden ones) in detailed format (showing permissions, owner, size, and date).
+ls -la ~/lab_chgrp/proyectos/
+#Lists files in detailed format and also displays the allocated size of each file in blocks.
+ls -ls ~/lab_chgrp/reportes/
 
 
 
