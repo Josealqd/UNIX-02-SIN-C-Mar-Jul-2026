@@ -39,3 +39,9 @@ usermod -aG design root`
  #adds the root user to the design group.
 id root`  
 #displays the root user's groups and information.
+#Search for and display the created groups in the /etc/group file
+grep -E "desarrolladores|diseno" /etc/group
+# Add the user "root" as a member of the "marketing" group so that it shares its permissions.
+adduser root marketing
+
+
