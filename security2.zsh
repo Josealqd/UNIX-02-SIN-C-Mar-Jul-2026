@@ -18,3 +18,9 @@ echo "Current group: $(id -gn)"
 # Create a file before newgrp
 touch ~/before_newgrp.txt
 ls -la ~/before_newgrp.txt
+# Change to the 'developers' group
+newgrp developers
+
+# Verify that the active group changed
+id -gn
+echo "New active group: $(id -gn)"
