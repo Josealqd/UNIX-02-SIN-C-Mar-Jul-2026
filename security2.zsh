@@ -24,3 +24,30 @@ newgrp developers
 # Verify that the active group changed
 id -gn
 echo "New active group: $(id -gn)"
+# Updates the system's package index (list of available repositories)
+apt update
+
+# Upgrades all installed packages to their latest available version
+apt upgrade
+
+# Installs the 'util-linux-extra' package which provides the 'newgrp' command
+# (allows switching the active group in the current session without logging out)
+apt install util-linux-extra
+
+# Switches the active group of the current session to 'desarrolladores'
+# Opens a new subshell with that group set as the effective GID
+newgrp desarrolladores
+
+# Displays the name of the current effective group (verifies the switch was successful)
+id -gn
+
+# Displays the PID (Process ID) of the current shell
+# Useful to confirm that 'newgrp' spawned a new subshell (different PID than before)
+echo $$
+
+# Creates an empty file in the user's home directory to verify
+# that newly created files inherit 'desarrolladores' as the owning group
+touch ~/after_newgrp.txt
+
+# Lists the detailed attributes of the newly created file (permissions, owner, group, date)
+ls -la ~/after_newgrp.txt
