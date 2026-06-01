@@ -8,3 +8,4 @@ echo "${root_directory}
 book="Black Hat Bash"
 unset book
 echo "${book}"
+
