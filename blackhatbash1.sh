@@ -1,5 +1,6 @@
 #!/bin/bash
 #!/usr/bin/env bash
+set -x
 bash --version
 env
 echo ${SHELL}
@@ -16,6 +17,8 @@ df --human-readable
 #./blackhatbash1.sh
 #Gives you permission to execute it.
 chmod u+x blackhatbash1.sh
+set +x
+
 
 
 
