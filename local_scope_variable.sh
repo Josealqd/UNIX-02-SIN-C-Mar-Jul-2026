@@ -1,4 +1,3 @@
-#!/usr/bin/env bas
 #!/bin/bash
 PUBLISHER="No Starch Press"
 print_name(){
