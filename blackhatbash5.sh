@@ -11,3 +11,10 @@ Hello World!
 cat output.txt
 Hello World!
 Goodbye!
+#-------------------------------------------
+ ls -l / &> stdout_and_stderr.txt
+ ls -l / &>> stdout_and_stderr.txt
+ cat stdout_and_stderr.txt
+ ls -l / 1> stdout.txt 2> stderr.txt
+cat stdout.txt
+cat stderr.txt
