@@ -13,3 +13,4 @@ elif [[ -d "${USER_INPUT}" ]]; then
 else
     echo "${hola} is not a file or a directory."
 fi
+# Valida que se reciba un argumento por terminal y verifica si la ruta ingresada pertenece a un archivo existente, a un directorio o a ninguno.
