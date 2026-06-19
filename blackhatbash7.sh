@@ -25,3 +25,13 @@ cat << 'EOF' > log.csv
 10.0.0.5,10:01:15
 8.8.8.8,10:02:01
 EOF
+#----------------------------------------------------
+head log.txt
+awk 'NR < 10' log.txt
+#-----------------------------------------------
+grep "42.236.10.117" log.txt
+#Searches for the IP address "42.236.10.117" inside the file named "log.txt".
+ awk '{print $7}' log.txt
+#Extracts and prints only the seventh column of data from the "log.txt" file.
+ grep "42.236.10.117" log.txt | awk '{print $7}'
+#Filters lines with the IP, then extracts and prints only their seventh column.
