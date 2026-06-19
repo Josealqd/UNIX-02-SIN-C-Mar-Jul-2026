@@ -35,3 +35,14 @@ grep "42.236.10.117" log.txt
 #Extracts and prints only the seventh column of data from the "log.txt" file.
  grep "42.236.10.117" log.txt | awk '{print $7}'
 #Filters lines with the IP, then extracts and prints only their seventh column.
+#----------------------------------------------------------
+sed 's/ //g' log.txt
+#----------------------------------------------------------
+sed '1d' log.txt
+sed '$d' log.txt
+sed '5,7d' log.txt
+#---------------------------------------------------
+sed -n '2,15 p' log.txt
+sed -i '1d' log.txt
+
+
